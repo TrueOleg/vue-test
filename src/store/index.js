@@ -12,12 +12,18 @@ export const store = new Vuex.Store({
   mutations: {
     incrementCounter (state, payload) {
       state.count += payload
+    },
+    decrementCounter (state, payload) {
+      state.count -= payload
     }
   },
 
   actions: {
-    inrementAction ({commit}, payload) {
+    incrementAction ({commit}, payload) {
       commit('incrementCounter', payload)
+    },
+    decrementAction ({commit}, payload) {
+      commit('decrementCounter', payload)
     }
   },
 
